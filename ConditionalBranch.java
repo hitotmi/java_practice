@@ -33,5 +33,37 @@ public class ConditionalBranch {
         } else {
             System.out.println("こんばんは");
         }
+        
+        // Switch文
+        int month = new java.util.Random().nextInt(12) + 1;
+        System.out.println(month);
+        String season = "";
+
+        season = switch(month) {
+            case 12, 1, 2 ->  "冬";
+            case 3, 4, 5 -> "春";
+            case 6, 7, 8 -> "夏";
+            case 9, 10, 11 -> "秋";
+            default -> "不明な月";
+        };
+        System.out.println(season);
+
+        // switch(month) {
+        //     case 12, 1, 2:
+        //         System.out.println("冬");
+        //         break;
+        //     case 3, 4, 5:
+        //         System.out.println("春");
+        //         break;
+        //     case 6, 7, 8:
+        //         System.out.println("夏");
+        //         break;
+        //     case 9, 10, 11:
+        //         System.out.println("秋");
+        //         break;
+        //     default:
+        //         System.out.println("不明");
+        //         break;
+        // }
     }
 }
