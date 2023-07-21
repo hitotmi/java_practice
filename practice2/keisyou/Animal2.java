@@ -5,7 +5,8 @@ public class Animal2 {
         this.name = name;
     }
 
-    public void eat() {
+    // finalがついていることでメソッドのオーバーライドができない
+    public final void eat() {
         System.out.println(name + "は食べている");
     }
 

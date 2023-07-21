@@ -7,7 +7,7 @@ public class Dog extends Animal2 {
         System.out.println(name + "は吠えている");
     }
 
-    public void eat() {
-        System.out.println(name + "はむしゃむしゃしている");
-    }
+    // public void eat() {
+    //     System.out.println(name + "はむしゃむしゃしている");
+    // }
 }
