@@ -7,8 +7,9 @@ public class Dog extends Animal2 {
         System.out.println(name + "は吠えている");
     }
 
+    // 抽象メソッドをオーバーライド
     public void eat(String food) {
         System.out.println(name + "はむしゃむしゃしている");
-        super.eat(food);
+        System.out.println(name + "は" + food + "を食べている");
     }
 }
