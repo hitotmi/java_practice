@@ -4,13 +4,17 @@ public class Main {
         dog.eat("ドッグフード");
         dog.sleep();
         dog.makeSound();
-        ((Dog)dog).run();
-        ((Dog)dog).swim();
+        if (dog instanceof Dog) {
+            ((Dog)dog).run();
+            ((Dog)dog).swim();
+        }
 
         Animal cat = new Cat("にゃんこ");
         cat.eat("キャットフード");
         cat.sleep();
         cat.makeSound();
-        ((Cat)cat).run();
+        if (cat instanceof Cat) {
+            ((Cat)cat).run();
+        }
     }
 }
