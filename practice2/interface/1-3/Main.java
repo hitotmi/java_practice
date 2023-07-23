@@ -1,20 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        Animal dog = new Dog("わんこ");
-        dog.eat("ドッグフード");
-        dog.sleep();
-        dog.makeSound();
-        if (dog instanceof Dog) {
-            ((Dog)dog).run();
-            ((Dog)dog).swim();
-        }
+        Animal[] animals = new Animal[3];
 
-        Animal cat = new Cat("にゃんこ");
-        cat.eat("キャットフード");
-        cat.sleep();
-        cat.makeSound();
-        if (cat instanceof Cat) {
-            ((Cat)cat).run();
+        animals[0] = new Dog("わんこ");
+        animals[1] = new Cat("にゃんこ");
+        animals[2] = new Dog("小太郎");
+
+        for (Animal animal : animals) {
+            animal.eat("食べ物");
+            animal.sleep();
+            animal.makeSound();
+
+            if (animal instanceof Run) {
+                ((Run)animal).run();
+            }
+            if (animal instanceof Swim) {
+                ((Swim)animal).swim();
+            }
         }
     }
 }
