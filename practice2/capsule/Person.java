@@ -22,5 +22,19 @@ public class Person {
     public String getAddress() {
         return this.address;
     }
+
+    // setterメソッド
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }
+
 
