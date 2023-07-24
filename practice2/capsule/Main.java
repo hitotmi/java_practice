@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person("田中");
-        System.out.println(person.getName() + "さん");
+        Person tanaka = new Person("田中", 30, "東京");
+
+        System.out.println("名前は " + tanaka.getName());
+        System.out.println("年齢は " + tanaka.getAge());
+        System.out.println("住所は " + tanaka.getAddress());
     }
 }
