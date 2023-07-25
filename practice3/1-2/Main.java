@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("初期残高: " + SharedWallet.money);
+        System.out.println("初期残高: " + SharedWallet.getMoney());
 
-        SharedWallet.money += 3000;
-        System.out.println("入金後の残高: " + SharedWallet.money);
+        SharedWallet.deposit(3000);
+        System.out.println("入金後の残高: " + SharedWallet.getMoney());
 
-        SharedWallet.money -= 500;
-        System.out.println("出金後の残高: " + SharedWallet.money);
+        SharedWallet.withdraw(500);
+        System.out.println("出金後の残高: " + SharedWallet.getMoney());
     }
 }
