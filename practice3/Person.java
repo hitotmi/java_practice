@@ -12,4 +12,15 @@ public class Person {
     public String toString() {
         return "Person[name=" + this.name + ", age=" + this.age + "]";
     }
+
+    public boolean equals(Object obj) {
+        if (this == obj) { return true; }
+        if (obj instanceof Person) {
+            Person p = (Person)obj;
+            if (this.name.equals(p.name)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
