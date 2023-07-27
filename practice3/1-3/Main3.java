@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Main3 {
@@ -16,15 +17,19 @@ public class Main3 {
 
         calendar.setTime(date);
 
-
-        System.out.println("年は"+calendar.get(calendar.YEAR));
-        //CalendarクラスのMONTHは0から始まるので、実行結果は6月を示します。
-        System.out.println("月は"+calendar.get(calendar.MONTH));
+        System.out.println("年は"+calendar.get(Calendar.YEAR));
+        // CalendarクラスのMONTHは0から始まる
         System.out.println("月は"+(calendar.get(Calendar.MONTH) + 1));
-        System.out.println("日は"+calendar.get(calendar.DATE));
-        System.out.println("時間は"+calendar.get(calendar.HOUR));
-        System.out.println("分は"+calendar.get(calendar.MINUTE));
-        System.out.println("秒は"+calendar.get(calendar.SECOND));
+        System.out.println("日は"+calendar.get(Calendar.DATE));
+        System.out.println("時間は"+calendar.get(Calendar.HOUR));
+        System.out.println("分は"+calendar.get(Calendar.MINUTE));
+        System.out.println("秒は"+calendar.get(Calendar.SECOND));
+
+        SimpleDateFormat format1 = new SimpleDateFormat();
+        System.out.println(format1.format(date));
+
+        SimpleDateFormat format2 = new SimpleDateFormat("yyyy/MM/dd");
+        System.out.println(format2.format(date));
         // System.out.println(date);
     }
 }
