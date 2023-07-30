@@ -1,19 +1,21 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        String notANumber = "数字じゃない(notNumber)";
-
+        Scanner scanner = null;
         try {
-            int number = Integer.parseInt(notANumber);
-        } catch (NumberFormatException e) {
-            System.out.println(notANumber + "は整数ではありません。");
+            scanner = new Scanner(System.in);
+            System.out.println("整数を入力してください: ");
+            int number = scanner.nextInt();
+            System.out.println("入力した数の平方根は: " + Math.sqrt(number));
+        } catch (InputMismatchException e) {
+            System.out.println("エラー: 整数を入力してください。");
+        } finally {
+            if (scanner != null) {
+                System.out.println("処理終了します");
+                scanner.close();
+            }
         }
-
-        try {
-            int[] array = new int[5];
-            int number = array[10];
-        } catch (ArrayIndexOutOfBoundsException e) {
-           System.out.println("ArrayIndexOutOfBoundsExceptionが発生しました: " + e.getMessage());
-        }
-        System.out.println("処理終了です");
     }
 }
